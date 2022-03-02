@@ -10,6 +10,6 @@
     "start:dev": "nodemon server.js"
   },
   "engines": {
-    "node": "^16:00"
+    "node": "16.x"
   }
 }
