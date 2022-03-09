@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
         <div id="app" class="h-full flex items-center flex-col py-20 px-5 md:px-20">
             <h1 class="text-4xl font-bold text-gray-500">CORS Proxy</h1>
             <p class="text-gray-400">Simple tool to bypass CORS Issues</p>
-            <p>Documentation is coming soon, but you can message me on whatsapp for usage</p>
+            <!-- <p>Documentation is coming soon, but you can message me on whatsapp for usage</p> -->
             <div class="p-3 bg-green-400 text-gray-100 rounded-full mt-3">+2347088445549</div>
         </div>
     </body>
@@ -34,10 +34,11 @@ app.get('/', (req, res) => {
     `)
 })
 
-app.post('/url', (req, res) => {
-    axios.get(req.body.url)
+app.get('/get/', (req, res) => {
+    axios.get(req.query.url)
     .then(response => {
         res.send(response.data)
+        console.log(response);
     })
     .catch(err => {
         console.log(err);
